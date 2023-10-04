@@ -1,0 +1,42 @@
+.header-confidentialite {
+  background-image: url(../media/confidentialite-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#confidentialite-container {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+  margin-right: 8vw;
+  margin-left: 8vw;
+  margin-bottom: 5vh;
+}
+
+.title {
+  margin-top: 5vh;
+  text-transform: uppercase;
+  color: #BFCA30;
+  font-size: calc(1vw + 1vh + 3vmin);
+  font-weight: 500;
+}
+
+.text {
+  margin-top: 1vh;
+  color: #D9D9D9;
+  font-size: calc(1vw + 1vh + 1.2vmin);
+}
+
+.text span {
+  margin-top: 1.5vh;
+  display: table;
+}
+
+@media (min-width: 1080px) {
+  .text {
+  font-size: 25px;
+}
+  #cgu-container li {
+    font-size: 25px;
+  }
+}

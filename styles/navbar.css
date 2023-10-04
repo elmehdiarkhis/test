@@ -1,0 +1,256 @@
+#navbar {
+  background-color: black;
+  height: max(92px, 12vh);
+  width: 150vw;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+  overflow-x: hidden;
+  position: fixed;
+  left: -25vw;
+  top: 0;
+  box-shadow: 0px 15px 10px -15px #AFBB0B;
+  text-align: center;
+  z-index: 9999;
+}
+
+
+#navbar-menu {
+  width: 100vw;
+  background-color: #302D2D;
+  position: fixed;
+  top: 0;
+  padding-top: max(92px, 12vh);
+  z-index: 9999;
+  opacity: 0.95 !important;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#navbar-menu ul {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#navbar-menu li {
+  margin: 0;
+  padding: 0 0 15px 10vw;
+  font-weight: 500;
+  font-size: 16pt;
+  color: white;
+  letter-spacing: 0;
+}
+
+.menu a {
+  color: #BFCA30;
+  text-decoration: none;
+}
+
+#navbar-menu li i {
+  margin-right: 15px;
+}
+
+#navbar-download {
+  height: 120px;
+  background-color: #BFCA30;
+  box-shadow: 0px 120px 0px 0px rgba(0,0,0,0.8),
+  0px 240px 0px 0px rgba(0,0,0,0.8),
+  0px 360px 0px 0px rgba(0,0,0,0.8),
+  0px 480px 0px 0px rgba(0,0,0,0.8);
+}
+
+.navbar-body {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  height: max(100px, 13vh);
+  z-index: 9999;
+}
+
+.menu {
+  color: #AFBB0B;
+}
+
+.navbarlink a {
+  color: white;
+}
+
+.navbarlink a {
+  text-decoration: none;
+}
+
+.menubar {
+  padding-top: 15px;
+  width: 35px;
+  position: relative;
+  margin-right: 16vw;
+  top: 15%;
+  display: inline-block;
+}
+
+.menubarhidden {
+  width: 0px;
+  font-size: 0px;
+  display: none;
+}
+
+#menuprofile {
+  width: 35px;
+  position: relative;
+  margin-left: 16vw;
+  top: 15%;
+  display: inline-block;
+}
+
+.logo-navbar {
+  width: 140px;
+  position: relative;
+  top: 25%;
+  display: inline-block;
+}
+
+.storelinks {
+  width: 100vw;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.storelinks img {
+  width: 140px;
+}
+
+#navbar-download p {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 0px 10px 10vw;
+}
+
+#language-switch {
+  display: none;
+  transform: translate(5px, -30px);
+  width: 51px;
+  margin-left: -50px;
+}
+
+#language-switch-mobile {
+  position: absolute;
+  left: 75vw;
+  transform: translateY(-40px);
+}
+
+#language-switch-mobile a{
+  text-decoration: none;
+  color: white;
+}
+
+#language-switch-mobile a:first-child{
+  border-right: 2px solid white;
+  padding-right: 4px;
+}
+
+
+#language-switch a {
+  text-decoration: none;
+  color: white;
+}
+
+.current {
+  color: #BFCA30 !important;
+}
+
+#language-switch a:first-child {
+  border-right: 2px solid white;
+  padding-right: 4px;
+}
+
+
+@media (min-width: 1080px) {
+  .logo-shrunk {
+    width: 150px !important;
+    padding-bottom: 15px !important;
+    transition: width 1s;
+  }
+
+  .navbar-shrunk {
+    height: 118px !important;
+    transition: height 1s;
+  }
+
+  #download-later {
+    display: none;
+  }
+
+  .button-visible {
+    display: inline-block !important;
+    transition: display 1s;
+    animation: arrival 0.75s 1 linear;
+  }
+
+  @keyframes arrival {
+    0% {
+      transform: translateX(800px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .logo-unshrunk {
+    width: 220px;
+    padding-bottom: auto;
+    transition: width 1s;
+  }
+
+  .navbar-unshrunk {
+    height: 150px;
+    transition: height 1s;
+  }
+
+
+  #menubar {
+    display: none !important;
+  }
+  #menuprofile {
+    display: none !important;
+  }
+  #navbar-menu {
+    display: none !important;
+  }
+  #navbar-download {
+    display: none !important;
+  }
+  .navbarlink-table-desktop {
+    display: inline-block !important;
+  }
+  .navbarlink {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .menubar {
+    display: none !important;
+  }
+  .logo-navbar {
+    width: 220px;
+    margin-right: 20px;
+  }
+  #navbar {
+    width: 120vw;
+    left: -10vw;
+    height: 150px;
+  }
+  #language-switch {
+    display: inline-block;
+    transform: translate(-5px, -45px);
+    width: 51px;
+    margin-left: -55px;
+  }
+}
+

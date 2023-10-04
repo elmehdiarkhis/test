@@ -1,0 +1,200 @@
+.header-faq {
+  background-image: url(../media/faq-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#faq-container {
+  display: flex;
+  flex-direction: column;
+}
+#faq a {
+  text-decoration: none;
+  color: #BFCA30;
+}
+#faq {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+  align-self: center;
+}
+
+.destination {
+  font-size: calc(1vw + 1vh + 2vmin);
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding-top: 6vh;
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1vh;
+  border-top: 1px solid rgba(191, 202, 48, 0.5);
+  padding-bottom: 1vh;
+}
+
+.question:last-child {
+  border-bottom: 1px solid rgba(191, 202, 48, 0.5);
+}
+.texte-question {
+  display: flex;
+  flex-direction: row;
+  font-size: calc(1vw + 1vh + 1vmin);
+  font-weight: 500;
+  color: white;
+}
+.texte-question p {
+  margin-right: 3vw;
+}
+.faq-coche {
+  width: 6vw;
+  height: 3vw;
+  margin-left: auto;
+  align-self: center;
+}
+
+.faq-coche img {
+  padding: 2vw;
+}
+
+.faq-coche-selection {
+  transform: rotate(180deg);
+}
+
+.texte-question-selection {
+  color: #BFCA30;
+}
+
+.texte-reponse {
+  font-size: calc(1vw + 1vh + 0.5vmin);
+  color: white;
+  display: none;
+}
+
+.texte-reponse-selection {
+  display: block;
+  margin-top: 2vh;
+}
+
+.thematique-titre {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  font-weight: 500;
+  color: #BFCA30;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+.thematique:last-child {
+  padding-bottom: 5vh;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  text-align: center;
+}
+
+#contacts:last-child {
+  margin-bottom: 5vh;
+}
+
+#contact-logo {
+  width: 46vw;
+  margin: 0 auto;
+}
+
+#contact-adresse {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  color: #D9D9D9;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.contact-title {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+.contacts a {
+  text-decoration: none;
+  font-size: calc(1vw + 1vh + 1vmin);
+  font-weight: 500;
+  color: #BFCA30;
+  text-align: center;
+}
+
+.contacts {
+  font-size: calc(1vw + 1vh + 1vmin);
+  color: #D9D9D9;
+}
+
+.contacts {
+  margin-top: 5vh;
+}
+
+
+@media (min-width: 1080px) {
+  .destination {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  }
+  .thematique-titre {
+  font-size: calc(1vw + 1vh + 1vmin);
+  }
+  #faq-container {
+    flex-direction: row;
+  }
+  #faq {
+    width: 55vw;
+    align-self: start;
+    margin-left: 8vw;
+  }
+  #contacts {
+    width: 25vw;
+    margin-left: 5vw;
+    margin-right: 0vw;
+    margin-top: 5vh;
+  }
+  #contact-adresse {
+    text-align: left;
+    font-size: calc(1vw + 1vh)
+  }
+  #contact-logo {
+    width: 15vw;
+  }
+  .contacts {
+    width: 25vw;
+    text-align: left;
+    font-size: calc(1vw + 1vh);
+  }
+  .contacts a {
+    font-size: calc(1vw + 1vh);
+  }
+  .contact-title {
+    text-align: left;
+    font-size: calc(1vw + 1vh);
+  }
+  .faq-coche {
+    width: 1.6vw;
+    height: 0.8vw;
+    margin-left: auto;
+    align-self: center;
+  }
+
+  .faq-coche img {
+    padding: 2vw;
+  }
+  .texte-question {
+    font-size: calc(0.8vw + 0.8vh);
+  }
+  .texte-reponse {
+    font-size: calc(0.8vw + 0.8vh);
+  }
+  .thematique:last-child {
+    margin-bottom: 10vh;
+  }
+}

@@ -1,0 +1,75 @@
+.main-button {
+  color: #EEEEEE;
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 13px 24px;
+  background: #AFBB0B;
+  text-decoration: none;
+  transition: .6s ease;
+}
+
+.main-button:hover {
+  color: white;
+  transition: .6s ease;
+  background-color: black;
+  border: 1px solid #AFBB0B;
+}
+
+.white-button {
+  color: black;
+  border-radius: 50px;
+  font-weight: 500;
+  padding: calc(0.5vw + 1vh + 0.5vmin) calc(1.5vw + 1vh + 2vmin);
+  max-width: 90vw;
+  background: #FEFEFC;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.white-button:hover {
+  color: #BFCA30;
+  transition: .6s ease;
+}
+
+/* The following rules apply to the navbar when displayed on a larger screen */
+
+.desktop-navbar-button {
+  border-radius: 25px;
+  padding: 10px 25px;
+  background-color: #414141;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: white;
+  font-size: 15px;
+}
+
+.desktop-navbar-button:hover {
+  transition: .6s ease;
+  background-color: #525252;
+}
+
+.button-green {
+  background-color: #BFCA30 !important;
+}
+
+.button-green:hover {
+  transition: .6s ease;
+  background-color: #CFDB41 !important;
+}
+
+
+
+.desktop-navbar-button span{
+  display: table;
+  font-size: 10px !important;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+@media (min-width: 1080px) {
+  .white-button {
+  padding: 20px 25px;
+  max-width: 90vw;
+  }
+}

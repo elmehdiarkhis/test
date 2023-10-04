@@ -1,0 +1,248 @@
+.header-tarifs {
+  background-image: url(../media/tarifs-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subscribe-link {
+  color: white;
+  text-decoration: none;
+  background-color: #BFCA30;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.subscribe-link:hover {
+  color: black;
+}
+#tarifs-slide1 {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+#slide1-title {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  font-weight: 500;
+  color: white;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+#slide1-text {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  color: white;
+  padding-bottom: 5vh;
+}
+
+#slide1-text span {
+  color: #BFCA30;
+}
+
+.tarifs-card {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 5vh;
+}
+
+.top {
+  border-radius: 15px 15px 0px 0px;
+  background-color: #20201E;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top: 3vh;
+  border-top: ;
+  z-index: 3;
+}
+.top-title {
+  font-size: calc(1vw + 1vh + 3.5vmin);
+  font-weight: 500;
+  color: white;
+  padding-bottom: 0vh;
+}
+.top-title span {
+  color: #BFCA30;
+}
+.top-subtitle {
+  margin-top: -10px;
+  font-size: calc(1vw + 1vh + 2vmin);
+  font-weight: 500;
+  color: white;
+  padding-bottom: 1vh;
+  margin-bottom: 10px;
+}
+.top-text {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  color: #D9D9D9;
+  padding-bottom: 3vh;
+}
+
+.top-text a {
+  color: #BFCA30;
+}
+
+.triangle {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 84vw;
+  height: 50px;
+  background-color: #20201E;
+  z-index: 2;
+  transform: translateY(-1px);
+  position: relative;
+}
+.middle {
+  padding-top: 51px;
+  background-color: #3B3B33;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  transform: translateY(-51px);
+  margin-bottom: -51px;
+  display: flex;
+  justify-content: center;
+}
+
+.middle-list {
+  margin-left: -20px;
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  color: #D9D9D9;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+.middle-list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.middle-list li {
+  margin-bottom: 1vh;
+}
+.middle-list span {
+  font-weight: 500;
+}
+.bottom {
+  border-radius: 0px 0px 15px 15px;
+  background-color: #E9E9E7;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  text-align: center;
+}
+
+.bottom-text {
+  font-size: calc(1vw + 1vh + 2vmin);
+  color: #7B7676;
+  margin-top: 1vh;
+  font-weight: 500;
+}
+
+.bottom-frais-transaction {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+  font-weight: 500;
+  color: black;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+}
+
+
+.bottom-frais-mensuel {
+  font-size: calc(1vw + 1vh + 3.5vmin);
+  font-weight: 500;
+  color: #BFCA30;
+}
+
+@media (min-width: 1080px) {
+  #slide1-title {
+    font-size: calc(1vw + 1vh);
+    font-weight: 500;
+    color: white;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+  }
+
+  #slide1-text {
+    font-size: calc(1vw + 1vh);
+    color: white;
+    padding-bottom: 5vh;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .triangle {
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  width: 100px;
+  height: auto;
+  background-color: #20201E;
+  z-index: 2;
+  transform: translateY(0px);
+  }
+
+  .top {
+    width: 38vw;
+    border-radius: 15px 0px 0px 0px;
+    padding-left: 30px;
+    padding-right: 0vw;
+    padding-top: 15px;
+  }
+  .top-title {
+    font-size: calc(1vw + 1vh + 3.5vmin);
+  }
+  .top-subtitle {
+    font-size: calc(1vw + 1vh + 1.2vmin);
+  }
+  .top-text {
+    font-size: calc(1vw + 0.8vh);
+  }
+
+  .middle {
+    width: 46vw;
+    border-radius: 0px 15px 0px 0px;
+    padding-top: 0px;
+    padding-left: 100px;
+    margin-right: -100px;
+    padding-right: 0vw;
+    transform: translateY(0px);
+    transform: translateX(-100px);
+    margin-bottom: 0px;
+  }
+
+  .middle-list {
+    margin-left: -20px;
+    padding-left: 15px;
+    font-size: calc(0.9vw + 0.9vh);
+  }
+
+  .bottom {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .bottom-text {
+    font-size: calc(1vw + 1vh + 1vmin);
+    display: inline-block;
+  }
+
+  .bottom-frais-transaction {
+    font-size: calc(1vw + 1vh + 0.5vmin);
+    display: inline-block;
+    padding-left: 5px;
+  }
+
+  .bottom-frais-transaction br {
+    display: none;
+  }
+
+
+  .bottom-frais-mensuel {
+    font-size: calc(1vw + 1vh + 1vmin);
+  }
+}

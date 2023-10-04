@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+<script>function check() {
+    var checkBox = document.getElementById("checbox");
+    var monthly = document.getElementsByClassName("monthly");
+    var yearly = document.getElementsByClassName("yearly");
+  
+    for (var i = 0; i < monthly.length; i++) {
+      if (checkBox.checked == true) {
+        monthly[i].style.display = "none";
+        yearly[i].style.display = "block";
+      } else if (checkBox.checked == false) {
+        monthly[i].style.display = "block";
+        yearly[i].style.display = "none";
+      }
+    }
+  }
+  check();
+  function eventCheck() {
+  var checkBox = document.getElementById("event-checbox");
+  var monthly = document.getElementsByClassName("monthly");
+  var yearly = document.getElementsByClassName("yearly");
+
+  for (var i = 0; i < monthly.length; i++) {
+    if (checkBox.checked == true) {
+      monthly[i].style.display = "none";
+      yearly[i].style.display = "block";
+    } else if (checkBox.checked == false) {
+      monthly[i].style.display = "block";
+      yearly[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script>
+
+$(document).ready(function () {
+  $('.tab-navigation-area .tab-link').click(function() {
+		var tab_id = $(this).attr('aria-controls');
+
+		$(this).parents('.tab-navigation-area').find('.tab-link').removeClass('current').attr('aria-selected', "false");
+		$(this).parents('.tab-navigation-area').find('.tab-content').removeClass('current').attr('aria-hidden', 'true');
+
+		$(this).addClass('current').attr('aria-selected', "true");
+		$("#"+tab_id).addClass('current').attr('aria-hidden', 'false');
+  })
+});
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cssreset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles/tarifs.css">
+  <script src="https://kit.fontawesome.com/210bb30331.js" crossorigin="anonymous"></script>
+  <title>Trendigo - Tarifs marchands et événements</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08QFH4VHTK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-08QFH4VHTK');
+</script>
+  <!-- End Google Analytics-->
+
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function (f, b, e, v, n, t, s) {
+  if (f.fbq) return;
+  n = f.fbq = function () {
+  n.callMethod ?
+  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+  };
+  if (!f._fbq) f._fbq = n;
+  n.push = n;
+  n.loaded = !0;
+  n.version = '2.0';
+  n.queue = [];
+  t = b.createElement(e);
+  t.async = !0;
+  t.src = v;
+  s = b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '999310606792672');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+  <img height="1" width="1"
+  src="https://www.facebook.com/tr?id=999310606792672&ev=PageView
+  &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+<div id="navbar-menu" style="display: none;">
+  <ul class="navbarlink-table">
+    <li class="navbarlink">
+      <div id="language-switch-mobile">
+      <a href="#" class="current">FR</a>
+      <a href="en/tarifs.html">EN</a>
+      </div>
+    </li>
+    <li class="navbarlink"><a href="client.html">Client</a></li>
+    <li class="navbarlink"><a href="evenement.html">Evénement</a></li>
+    <li class="navbarlink"><a href="index.html">Marchand</a></li>
+    <li class="navbarlink"><a href="tarifs.html" class="current">Tarifs</a></li>
+    <li class="navbarlink"><a href="aboutus.html">Qui sommes-nous ?</a></li>
+    <li class="navbarlink"><a href="faq.html">Faq</a></li>
+    <li class="menu"><a href="https://go.trendigo.com/fr/sign_in"><i class="fas fa-user-circle menu"></i>Se connecter</a></li>
+  </ul>
+  <div id="navbar-download" style="display: none;">
+    <p>Télécharger l'app</p>
+    <div class="storelinks">
+      <a href="https://play.google.com/store/apps/details?id=com.trendigomerchant" target="_blank"><img src="media/playstore.png" alt=""></a>
+      <a href="https://apps.apple.com/us/app/tgo/id1531828252?l=fr" target="_blank"><img src="media/appstore.png" alt=""></a>
+    </div>
+  </div>
+</div>
+<div class="navbar-body">
+  <div id="navbar">
+    <img id="menubar" src="media/icone-menu.png" class="menu menubar" alt="">
+    <img id="menubarhidden" class="menu menubarhidden" src="media/icone-fermer.png" alt="">
+    <div class="logo-navbar">
+      <a href="index.html">
+      <img src="media/logotrendigo.png" alt="">
+      </a>
+    </div>
+    <a href="https://go.trendigo.com/fr/sign_in" class="">
+      <img id="menuprofile" src="media/icone-compte.png" class="menu"alt="">
+    </a>
+    <ul class="navbarlink-table-desktop" style="display: none;">
+      <li class="navbarlink"><a href="client.html">Client</a></li>
+      <li class="navbarlink"><a href="evenement.html">Evénement</a></li>
+      <li class="navbarlink"><a href="index.html">Marchand</a></li>
+      <li class="navbarlink"><a href="tarifs.html" class="current">Tarifs</a></li>
+      <li class="navbarlink"><a href="aboutus.html">Qui sommes-nous ?</a></li>
+      <li class="navbarlink"><a href="faq.html">Faq</a></li>
+      <li class="navbarlink"><a href="https://go.trendigo.com/fr/sign_in" class=""><div class="desktop-navbar-button"><p>Se connecter<span>Compte marchand</span></p></div></a></li>
+      <li class="navbarlink" id="download-later"><a href="index.html#slide8" class=""><div class="desktop-navbar-button button-green"><p>Télécharger<span>l'application marchand</span></p></div></a></li>
+    </ul>
+    <div id="language-switch">
+      <a href="#" class="current">FR</a>
+      <a href="en/tarifs.html">EN</a>
+    </div>
+  </div>
+</div>
+<div class="header header-tarifs">
+  <h1>Tarifs marchands et événements</h1>
+</div>
+<div id="tarifs-slide1">
+  <div id="slide1-title">
+  <p>Un tarif simple pour chaque transaction Trendigo. C'est simple, sans surprise.</p>
+  </div>
+  <div id="slide1-text">
+    <p>Trendigo s'adapte à toutes les situations : vous pouvez <span>simplement accepter les paiements Trendigo</span>, vous pouvez <span>aussi rendre votre événement "cashless", créer votre propre programme de fidélisation</span>, seul ou avec d’autres commerçants.</p>
+  </div>
+</div>
+
+<div class="spc100"></div>
+<div class="tab-navigation-area">
+<div class="tabscenter2">
+	<ol class="tabs" role="tablist">
+		<li role="presentation"><a href="#merchant" class="tab-link current" role="tab" aria-controls="tab-1" aria-selected="true">Marchand</a></li>
+		<li role="presentation"><a href="#event" class="tab-link" role="tab" aria-controls="tab-2">Événement</a></li>
+  </ol>
+</div>
+  <div id="tab-1" class="tab-content current" role="tabpanel" aria-hidden="false"> 
+  <div class="spc50"></div>
+    <h2><div class="merchantsection">
+</div>
+
+<div class="container">
+<div class="bkgrid">
+<div class="columns">
+   <div class="columns">
+    <div class="headingtitle"><p class="langs" lang='en'>Tarif Marchand</p></div>
+   </div>
+   <div class="columns">
+    <div class="toggle-btn btncenter">
+<span style="margin: 0.8em;"><p class="langs" lang='en'>Mois</p>
+</span>
+<label class="switch">
+<input type="checkbox" id="checbox" onclick="check()">
+<span class="slider round"></span> </label>
+<span style="margin: 0.8em;"><p class="langs" lang='en'>Annuel</p>
+</span></div>
+  </div>
+</div>
+
+
+
+<div class="grid">
+    <div>
+	
+
+
+	
+	
+<div class="spc50"></div>
+	<div class="grid">
+	<div class="title2"><p>Basic</p>
+	<div class="pricing">
+	<ul class="column-content">
+	  <li class="grey monthly">$0<small><p class="langs" lang='en'>/Mois</p>
+	  </small></li>
+      <li class="grey yearly">$0<small><p class="langs" lang='en'>/Année</p></small></li></ul>
+	</div>
+	<div class="spcd15"></div>
+	<div class="featuresm">
+	<span class="features2">Transactions</span><br />
+	<span class="features2">2,9% + $0,30 (Open Loop)</span><br />
+	<span class="features2"><p class="langs" lang='en'>Création De Promocodes: $10 par lot de 100</p>
+	</span><br />
+	<br />
+	</div>
+	<div class="spc50"></div>
+	 <p><a href="https://go.trendigo.com/sign_up"><button class="button1">Je souscris
+	 </button></a></p>
+<div class="row">
+<div class="spc75"></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Portail de gestion</p>
+</div>
+
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Fonctions POS dans l'app marchand</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>App mobile marchand</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Code QR statique de paiement</p>
+</div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Accepter les paiements par cartes de crédit/débit</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Communication dans l'app client</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Création de collaborateurs (illimité)</p></div>
+
+
+
+
+
+<div class="spc100"></div>
+<div class="optionstxt"><p class="langs" lang='en'>Support évolué et personnalisations (nous consulter)</p><p class="langs" lang='fr'>&nbsp;</p>
+</div>
+
+<div class="spc100"></div>
+</div>
+	</div>
+	
+	<div class="title2"><p>Pro</p><div class="pricing">
+	<ul class="column-content"><li class="grey monthly">$29<small><p class="langs" lang='en'>/Mois</p>
+	</small></li>
+    <li class="grey yearly">$290<small><p class="langs" lang='en'>/Année</p></small></li></ul>
+	</div>
+	<div class="spcd15"></div>
+	<div class="featuresm">
+	  <span class="features2">Transactions</span><br />
+      <span class="features2">Interchange +1.1% (Open Loop)</span><br />
+      <span class="features2">1.5% (Closed Loop)</span><br />
+	  <span class="features2"><p class="langs" lang='en'>Création De Promocodes: $10 par lot de 100
+	  </p>
+	  </span><br />
+	  </div>
+	  <div class="spc50"></div>
+      <p><a href="https://go.trendigo.com/sign_up"><button class="button1">Je souscris
+	 </button></a></p>
+	<div class="row">
+<div class="spc75"></div>
+<div class="column left"></div>
+
+<div class="servs">
+  <p class="langs" lang='en'>Tout Basic, plus:</p>
+</div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Wallet communautaire</p>
+</div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+
+<div class="servs"><p class="langs" lang='en'>Reporting détaillé</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+
+<div class="servs"><p class="langs" lang='en'>Création de promocodes (100 Inclus)</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Création de codes QR produits/services statiques (illimité)</p></div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Programme de loyauté (Cashback)</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+
+
+</div>
+</div>
+</div>
+</div></h2>
+    <p>
+    </p>
+  </div>
+  
+	<div id="tab-2" class="tab-content" role="tabpanel" aria-hidden="true"> 
+	<div class="spc50"></div>
+    <h2><div class="merchantsection">
+</div>
+
+<div class="container">
+<div class="bkgrid">
+<div class="columns">
+   <div class="columns">
+    <div class="headingtitle"><p class="langs" lang='en'>Tarif Événement</p></div>
+   </div>
+   <div class="columns">
+    <div class="toggle-btn btncenter">
+<span style="margin: 0.8em;"><p class="langs" lang='en'>Jour</p>
+</span>
+<label class="switch">
+<input type="checkbox" id="event-checbox" onclick="eventCheck()">
+<span class="slider round"></span> </label>
+<span style="margin: 0.8em;"><p class="langs" lang='en'>Annuel</p>
+</span></div>
+  </div>
+</div>
+
+
+<div class="grid">
+    <div>
+	
+
+
+	
+	
+<div class="spc50"></div>
+	<div class="grid">
+	<div class="title2"><p>Basic</p>
+	<div class="pricing">
+	<ul class="column-content">
+	  <li class="grey monthly">$0<small><p class="langs" lang='en'>/Jour</p>
+	  </small></li>
+      <li class="grey yearly">$0<small><p class="langs" lang='en'>/Jour</p></small></li></ul>
+	</div>
+	<div class="spcd15"></div>
+	<div class="featuresm">
+	<span class="features2">Transactions</span><br />
+	<span class="features2">2.9% + $0.30</span><br />
+	<span class="features2"><p class="langs" lang='en'>Création De Promocodes: $10 par lot de 100</p>
+	</span><br />
+	<br />
+	</div>
+	<div class="spc50"></div>
+	 <p><a href="https://go.trendigo.com/sign_up"><button class="button1">Je souscris
+	 </button></a></p>
+<div class="row">
+<div class="spc75"></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Portail de gestion</p>
+</div>
+
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Fonctions POS dans l'app marchand</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>App mobile marchand</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Code QR statique de paiement</p>
+</div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Accepter les paiements par cartes de crédit/débit</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Communication dans l'app client</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Création de collaborateurs (illimité)</p></div>
+
+<div class="column left">
+
+<i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Création de points de vente (illimité)</p></div>
+
+
+
+
+<div class="spc100"></div>
+<div class="optionstxt"><p class="langs" lang='en'>Support évolué et personnalisations (nous consulter)</p><p class="langs" lang='fr'>&nbsp;</p>
+</div>
+
+<div class="spc100"></div>
+</div>
+	</div>
+	
+	<div class="title2"><p>Pro</p><div class="pricing">
+	<ul class="column-content"><li class="grey monthly">$49<small><p class="langs" lang='en'>/Jour</p>
+	</small></li>
+    <li class="grey yearly">$490<small><p class="langs" lang='en'>Illimité</p></small></li></ul>
+	</div>
+	<div class="spcd15"></div>
+	<div class="featuresm">
+	  <span class="features2">Transactions</span><br />
+      <span class="features2">2.9% + $0.30</span><br />
+      <span class="features2">1.5% (Closed Loop)</span><br />
+	  <span class="features2"><p class="langs" lang='en'>Création De Promocodes: $10 par lot de 100</p>
+	  </span><br />
+	  </div>
+	  <div class="spc50"></div>
+      <p><a href="https://go.trendigo.com/sign_up"><button class="button1">Je souscris
+	 </button></a></p>
+	<div class="row">
+<div class="spc75"></div>
+<div class="column left"></div>
+
+<div class="servs">
+  <p class="langs" lang='en'>Tout  Basic, plus:</p>
+</div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Wallet communautaire</p>
+</div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+
+<div class="servs"><p class="langs" lang='en'>Paiement Closed Loop</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+
+<div class="servs"><p class="langs" lang='en'>Reporting détaillé</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+
+<div class="servs"><p class="langs" lang='en'>Création de promocodes (100 Inclus)</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Création de codes QR produits/services statiques (10 inclus)</p></div>
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Programme de loyauté (Cashback)</p><p class="langs" lang='fr'>&nbsp;</p></div>
+<div class="column left"><i class="lni lni-checkmark"></i></div>
+
+<div class="servs"><p class="langs" lang='en'>Support Trendigo</p><p class="langs" lang='fr'>&nbsp;</p></div>
+
+
+
+</div>
+</div>
+</div>
+</div></h2>
+    <p></p>
+  </div>
+	<div id="tab-3" class="tab-content" role="tabpanel" aria-hidden="true"> 
+    <h2></h2>
+    <p></p>
+  </div>
+  <div id="tab-4" class="tab-content" role="tabpanel" aria-hidden="true"> 
+    <h2></h2>
+    <p></p>
+  </div>
+  
+</div>
+
+<div id="tarifs-lide2">
+  <div class="tarifs-card">
+    <div class="horizontal">
+      <div class="top">
+        <div class="top-title">
+          <p><span>Événement </span></p>
+        </div>
+        <div class="top-subtitle">
+          <p>"cashless" ou hybride</p>
+        </div>
+        <div class="top-text">
+          <p>Utilisez cette option pour choisir le système de paiement sans contact le plus cool pour vos événements.</p>
+        </div>
+      </div>
+      <div class="triangle">
+      </div>
+      <div class="middle">
+        <div class="middle-list">
+          <ul>
+            <li>Aucun terminal de paiement requis</li>
+            <li>Personnalisation, géolocalisation et affichage dans l'App</li>
+            <li>Acceptez le paiement sur vos stands et ceux des marchands qui y participent</li>
+            <li>Suivi des transactions en temps réel</li>
+            <li>Application POS et back-office inclus</li>
+            <li><span>Paiements par carte ou par points en scannant un code QR</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="bottom-text">
+        <p>Frais Interchange plus parmi les plus bas du marché. </p>
+		<p>Frais closed-loop (wallet Trendigo) : 1,5%. </p>
+      </div>
+      <div class="bottom-frais-mensuel">
+        <p>$49.00 par jour par événement</p>
+		<div class="bottom-text"><p>Options, paiement en ligne connecté et personnalisations : nous contacter</p>
+		</div>
+      </div>
+      <div class="bottom-frais-transaction">
+        <a href="https://go.trendigo.com/fr/sign_up" class="subscribe-link">Je souscris</a>
+      </div>
+    </div>
+  </div>
+   <div class="tarifs-card">
+    <div class="horizontal">
+      <div class="top">
+        <div class="top-title">
+          <p><span>Marchand</span></p>
+        </div>
+        <div class="top-subtitle">
+          <p>sans frais mensuel</p>
+        </div>
+        <div class="top-text">
+          <p>En rejoignant Trendigo, vous augmentez votre attractivité dans votre quartier et proposez un mode de paiement moderne, sans contact et peu coûteux.</p>
+        </div>
+      </div>
+      <div class="triangle">
+      </div>
+      <div class="middle">
+        <div class="middle-list">
+          <ul>
+            <li>Recevez votre propre code QR</li>
+            <li>Personnalisez votre présentation</li>
+			<li>Utilisez le POS intégré</li>
+            <li>Acceptez le paiement de tous les membres Trendigo</li>
+            <li>Géolocalisation sur la carte et dans le moteur de recherche</li>
+            <li>Accès à l'application marchand et au back-office</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="bottom-text">
+        <p>Frais par transaction parmi les plus bas du marché. </p>
+      </div>
+      <div class="bottom-frais-mensuel">
+        <p>Aucun frais mensuel</p>
+      </div>
+      <div class="bottom-frais-transaction">
+        <a href="https://go.trendigo.com/fr/sign_up" class="subscribe-link">Je souscris</a>
+      </div>
+    </div>
+  </div><div class="tarifs-card">
+    <div class="horizontal">
+      <div class="top">
+        <div class="top-title">
+          <p><span>Créez</span></p>
+        </div>
+        <div class="top-subtitle">
+          <p>votre propre programme</p>
+        </div>
+        <div class="top-text">
+          <p>En créant votre propre communauté, vous choisissez de conserver l'utilisation des récompenses pour votre commerce ou d'inviter d'autres commerces à vous rejoindre.</p>
+          <a href="faq.html">Voir la FAQ pour les détails.</a>
+        </div>
+      </div>
+      <div class="triangle">
+      </div>
+      <div class="middle">
+        <div class="middle-list">
+          <ul>
+            <li>Géolocalisation sur la carte et dans la recherche</li>
+            <li>Personnalisation activée</li>
+            <li>Acceptez le paiement de tous les membres Trendigo</li>
+            <li>Recevez votre propre code QR</li>
+            <li>Application marchand et back-office</li>
+            <li><span>Les récompenses peuvent être utilisées pour payer dans les commerces membres de votre programme.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="bottom-text">
+        <p>Frais par transaction parmi les plus bas du marché. </p>
+      </div>
+      <div class="bottom-frais-mensuel">
+        <p>$29.00/mois</p>
+      </div>
+      <div class="bottom-frais-transaction">
+        <a href="https://go.trendigo.com/fr/sign_up" class="subscribe-link">Je souscris</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div id="footer-body">
+    <div id="trendigo-logo">
+      <img src="media/logotrendigo.png" alt="">
+    </div>
+    <div id="social-media">
+      <a href="https://www.instagram.com/trendigo_/" target="_blank"><i class="fab fa-fw fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/trendigo/" target="_blank"><i class="fab fa-fw fa-linkedin"></i></a>
+      <a href="https://twitter.com/trendigo_" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="https://www.facebook.com/Trendigo1/" target="_blank"><i class="fab fa-fw fa-facebook"></i></a>
+    </div>
+    <div id="footer-link-1" class="footer-links">
+      <ul class="footerlink">
+        <a href="client.html"><li class="footerlink">Client</li></a>
+        <a href="evenement.html"><li class="footerlink">Evénement</li></a>
+        <a href="index.html"><li class="footerlink">Marchand</li></a>
+        <a href="tarifs.html"><li class="footerlink">Tarifs</li></a>
+        </ul>
+    </div>
+    <div id="footer-link-2" class="footer-links">
+      <ul class="footerlink">
+        <a href="aboutus.html"><li class="footerlink">Qui sommes-nous ?</li></a>
+        <a href="faq.html"><li class="footerlink">Faq</li></a>
+        <a href="faq.html"><li class="footerlink">Nous contacter</li></a>
+      </ul>
+    </div>
+  </div>
+  <div id="legal">
+    <a href="cgu.html">CGU</a>
+    <a href="confidentialite.html">Confidentialité</a>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/navbartoggle.js"></script>
+<script type="text/javascript" src="scripts/navbar-shrink.js"></script>
+<script>
+window.axeptioSettings = {
+  clientId: "608fe30afbd777568a77efa8",
+  cookiesVersion: "ga_fb_Cp",
+};
+
+(function(d, s) {
+  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+  e.async = true; e.src = "//static.axept.io/sdk.js";
+  t.parentNode.insertBefore(e, t);
+})(document, "script");
+</script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8684496.js"></script>
+<!-- End of HubSpot Embed Code -->
+</body>
+</html>

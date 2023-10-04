@@ -1,0 +1,125 @@
+#footer {
+  width: 100vw;
+  margin-top: auto;
+  position: relative;
+}
+
+/*Add background image as a pseudoelement to use opacity on it*/
+#footer::before {
+  content: "";
+  background-image: url("../media/footerimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.4;
+  filter: grayscale(40%);
+}
+
+#trendigo-logo {
+  width: 70vw;
+  margin: 0 auto;
+  max-width: 300px;
+  padding-top: 5vh;
+}
+
+#social-media {
+  width: 55vw;
+  margin: 30px auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#social-media a {
+  color: white;
+  text-decoration: none;
+}
+
+#social-media a:hover {
+  color: #BFCA30;
+}
+
+#social-media i {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-links {
+  margin: 0 auto;
+  width: 70vw;
+  color: #D3D3D3;
+  font-size: 15pt;
+  text-align: center;
+}
+.footer-links li {
+  padding-bottom: 8px;
+}
+.footer-links:last-of-type {
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  color: #D3D3D3;
+  text-decoration: none;
+}
+
+#legal a {
+  text-decoration: none;
+  color: #D3D3D3;
+  margin: 0px 15px 0px 15px;
+  text-transform: uppercase;
+  font-size: 10pt;
+  white-space: nowrap;
+}
+#legal {
+  text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 15px 0px 15px 0px;
+  border-top: 2px solid #746E6A;
+}
+
+@media (min-width: 1080px) {
+  #footer-body {
+    display: inline-grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    grid-template-areas:
+    ". logo link1 link2 ."
+    ". logo2 link1 link2 .";
+  }
+  #trendigo-logo {
+    grid-area: logo;
+    width: 80%;
+  }
+  #social-media {
+    grid-area: logo2;
+    width: auto;
+  }
+  #footer-link-1 {
+    /*grid-area: link1;*/
+    grid-row: link1;
+    grid-column: link1;
+    width: auto;
+  }
+  #footer-link-2 {
+    /*grid-area: link2;*/
+    grid-row: link2;
+    grid-column: link2;
+    width: auto;
+  }
+  .footer-links:last-of-type {
+    margin-bottom: 0px;
+  }
+  .footer-links {
+    text-align: left;
+  }
+}
